@@ -1,0 +1,38 @@
+.section {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  border: 1px solid black;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  color: #7e7272;
+  line-height: 70px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.item {
+  width: 25%;
+  color: #d1c5c5;
+  padding: 0;
+}
+
+.label {
+  font-size: 12px;
+  display: block;
+  line-height: 25px;
+  padding: 0;
+}
+
+.per {
+  font-size: 20px;
+  display: block;
+  line-height: 40px;
+  padding: 0;
+}
