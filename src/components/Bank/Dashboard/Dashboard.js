@@ -35,12 +35,14 @@ export default class Dashboard extends Component {
     };
   };
 
+  // eslint-disable-next-line consistent-return
   addHistory = (type, amount) => {
-    if (type === 'Withdraw' && amount > this.state.balance)
-      return alert('На счету недостаточно средств для проведения операции!');
-    if (Number(amount) < 1)
-      return alert('Введите сумму для проведения операции!');
-
+    if (type === 'Withdraw' && amount > this.state.balance) {
+      return alert('На счету недостаточно средств для проведения операции!'); // eslint-disable-line no-alert
+    }
+    if (Number(amount) < 1) {
+      return alert('Введите сумму для проведения операции!'); // eslint-disable-line no-alert
+    }
     this.setState(state => {
       return {
         history: [this.createTransaction(type, amount), ...state.history],

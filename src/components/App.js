@@ -5,7 +5,6 @@ import movies from '../path/movies.json';
 import MoviePage from './Movies/MoviePage/MoviePage';
 import Dashboard from './Bank/Dashboard/Dashboard';
 
-
 const App = () => (
   <div>
     <Dashboard />

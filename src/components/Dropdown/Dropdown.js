@@ -61,6 +61,6 @@ export default class Dropdown extends Component {
           </div>
         )}
       </div>
-    )
+    );
   }
 }
