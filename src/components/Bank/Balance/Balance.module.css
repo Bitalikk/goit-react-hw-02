@@ -1,0 +1,20 @@
+.balance {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.balance .deposit {
+  color: green;
+  margin-right: 3px;
+}
+
+.balance .withdrawal {
+  color: red;
+  margin-right: 3px;
+}
+
+.arrows {
+  margin-right: 25px;
+}

@@ -1,0 +1,19 @@
+.history {
+  width: 70%;
+  margin: auto;
+  line-height: 50px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.history thead {
+  background-color: #ebeef3;
+}
+
+.history th {
+  border: 1px solid white;
+}
+
+.history td {
+  border: 1px solid #f2f2f2;
+}

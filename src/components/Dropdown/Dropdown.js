@@ -1,45 +1,66 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Container,
-  HumburgerButton,
-  DropdownContainer,
-  List,
-  ListItem,
-} from './Dropdown.styled';
-// import styled from 'styled-components';
-// import styles from './Dropdown.module.css';
+import styles from './Dropdown.module.css';
 
-// const StyledButton = styled.button`
-// 	display: inline-block;
-// 	background-color: teal;
-// 	color: #fff;
-// `;
+export default class Dropdown extends Component {
+  static defaultProps = {
+    isOpen: false,
+  };
 
-const Dropdown = ({ isOpen }) => (
-  <Container>
-    {/* <StyledButton>adsfasdfasdf</StyledButton> */}
-    <HumburgerButton type="button">&#9776;</HumburgerButton>
+  static propTypes = {
+    isOpen: PropTypes.bool,
+  };
 
-    {isOpen && (
-      <DropdownContainer>
-        <List>
-          <ListItem>Option 1</ListItem>
-          <ListItem>Option 2</ListItem>
-          <ListItem>Option 3</ListItem>
-          <ListItem>Option 4</ListItem>
-        </List>
-      </DropdownContainer>
-    )}
-  </Container>
-);
+  // constructor() {
+  //   super();
 
-Dropdown.defaultProps = {
-  isOpen: false,
-};
+  //   this.state = {
+  //     isOpen: false,
+  //   };
+  // }
 
-Dropdown.propTypes = {
-  isOpen: PropTypes.bool,
-};
+  state = {
+    isOpen: this.props.isOpen,
+  };
 
-export default Dropdown;
+  handleOpen = () => {
+    this.setState({ isOpen: true });
+  };
+
+  handleClose = () => {
+    this.setState({ isOpen: false });
+  };
+
+  handleToggle = () => {
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen,
+    }));
+  };
+
+  render() {
+    const { isOpen } = this.state;
+
+    return (
+      <div className={styles.container}>
+        <button
+          type="button"
+          className={styles.button}
+          onClick={this.handleToggle}
+        >
+          &#9776;
+        </button>
+
+        {isOpen && (
+          <div className={styles.dropdown}>
+            <ul className={styles.menu}>
+              <li className={styles.menuItem}>Option 1</li>
+              <li className={styles.menuItem}>Option 2</li>
+              <li className={styles.menuItem}>Option 3</li>
+              <li className={styles.menuItem}>Option 4</li>
+            </ul>
+          </div>
+        )}
+      </div>
+    )
+  }
+}

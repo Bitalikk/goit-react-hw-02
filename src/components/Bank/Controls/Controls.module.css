@@ -1,0 +1,33 @@
+.controls {
+  width: 100%;
+  background-color: #062b55;
+  padding: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.controls input {
+  margin-right: 10px;
+  line-height: 24px;
+  border-radius: 3px;
+  text-indent: 5px;
+}
+
+.controls button {
+  margin-right: 10px;
+  padding: 0 40px;
+  background-color: #3783fc;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+.controls input[type='number']::-webkit-inner-spin-button,
+.controls input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.controls input[type='number'] {
+  -moz-appearance: textfield;
+}

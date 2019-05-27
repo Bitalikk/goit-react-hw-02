@@ -1,0 +1,13 @@
+.movieGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.errorMessage {
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 40px;
+  color: #f00;
+}
